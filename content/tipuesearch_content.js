@@ -1,1 +1,1 @@
-var tipuesearch = {"pages": [{'title': '關於', 'text': '\n', 'tags': '', 'url': '關於.html'}, {'title': 'image', 'text': '', 'tags': '', 'url': 'image.html'}]};
+var tipuesearch = {"pages": [{'title': '關於', 'text': '\n', 'tags': '', 'url': '關於.html'}, {'title': 'image', 'text': '\n', 'tags': '', 'url': 'image.html'}, {'title': '6', 'text': "main() {\n  for (int i = 0; i < 5; i++) {\n    print('hello $i');\n  }\n  print('hello 中文');\n} \n", 'tags': '', 'url': '6.html'}]};
