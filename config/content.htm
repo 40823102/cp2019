@@ -1,4 +1,15 @@
-<h1>DartPad</h1>
+<h1>關於</h1>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Gist:<a href="https://gist.github.com/40823102/3e414377bc863f5af23f3ec545df4cb9">https://gist.github.com/40823102/3e414377bc863f5af23f3ec545df4cb9</a></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>Dartpad: </span><a href="http://mde.tw/dartpad/?id=3e414377bc863f5af23f3ec545df4cb9">http://mde.tw/dartpad/?id=3e414377bc863f5af23f3ec545df4cb9</a></span></span></p>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=28dab42ad2615091d251fe74cf30103b" width="550"></iframe></p>
+<h1>Develop</h1>
+<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
+<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
+<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變</p>
+<p></p>
+<h1>image</h1>
+<p><img alt="" height="346" src="/images/9f6b1451e443901c56f3317fb76a9a37.jpg" width="500"/></p>
+<p><br/>Dartad</p>
 <pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">main() {
   for (int i = 0; i &lt; 5; i++) {
     print('hello $i');
@@ -63,20 +74,31 @@ document.getElementById("iframe").height = 600 ;
 <!-- 取 Dart 程式的按鈕 -->
 <h4>純 Dart 程式</h4>
 <p><button onclick="getDart('迴圈程式')">迴圈程式</button></p>
-<p><button onclick="getDart('Temperature')">Temperature</button></p>
 <p><button onclick="getDart('Dart 程式')">Dart 程式</button></p>
 <!-- 內建放入的 Dart 原始碼 -->
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p></p>
 <p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/迴圈程式&amp;theme=dark" width="800"></iframe></p>
-<p><iframe height="600" id="iframe" src="https://dartpad.dev/embed-inline.html?id=5a36292035f9a4274224e4caa2d93682
-p=" width="800">gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/ Temperature&amp;theme=dark"&gt;</iframe></p>
-<p><iframe height="600" id="iframe" src="https://dartpad.dev/embed-inline.html?id=41429935c1241c81a2113482b79db4cf
-p=" width="800">gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/ Dart 程式&amp;theme=dark"&gt;</iframe></p><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變</p><h1>關於</h1>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Gist:<a href="https://gist.github.com/40823102/3e414377bc863f5af23f3ec545df4cb9">https://gist.github.com/40823102/3e414377bc863f5af23f3ec545df4cb9</a></span></span></p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>Dartpad: </span><a href="http://mde.tw/dartpad/?id=3e414377bc863f5af23f3ec545df4cb9">http://mde.tw/dartpad/?id=3e414377bc863f5af23f3ec545df4cb9</a></span></span></p>
-<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=28dab42ad2615091d251fe74cf30103b" width="550"></iframe></p>
-<h1>image</h1>
-<p><img alt="" height="346" src="/images/9f6b1451e443901c56f3317fb76a9a37.jpg" width="500"/></p>
+<h1>W13</h1>
+<!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823102&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<!-- 取 Dart 程式的按鈕 -->
+<h4>純 Dart 程式</h4>
+<p><button onclick="getDart('Dart 程式')">Dart 程式</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/Dart 程式&amp;theme=dark" width="800"></iframe></p>
