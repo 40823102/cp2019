@@ -2,11 +2,6 @@
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Gist:<a href="https://gist.github.com/40823102/3e414377bc863f5af23f3ec545df4cb9">https://gist.github.com/40823102/3e414377bc863f5af23f3ec545df4cb9</a></span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span>Dartpad: </span><a href="http://mde.tw/dartpad/?id=3e414377bc863f5af23f3ec545df4cb9">http://mde.tw/dartpad/?id=3e414377bc863f5af23f3ec545df4cb9</a></span></span></p>
 <p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=28dab42ad2615091d251fe74cf30103b" width="550"></iframe></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變</p>
-<p></p>
 <h1>image</h1>
 <p><img alt="" height="346" src="/images/9f6b1451e443901c56f3317fb76a9a37.jpg" width="500"/></p>
 <p><br/>Dartad</p>
@@ -106,4 +101,36 @@ document.getElementById("iframe").height = 600 ;
 <p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/Dart 程式&amp;theme=dark" width="800"></iframe></p>
 <h1>W15</h1>
 <p>以Html輸出資料的亂數分組程式:</p>
-<p><img alt="" height="734" src="/images/Html 流程圖.png" width="715"/></p>
+<br/><br/><br/><br/><img alt="" height="734" src="/images/Html 流程圖.png" width="715"/>
+<span></span>
+<h1>W16 查驗考試</h1>
+<!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
+<p>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823102&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+</p>
+<!-- 取 Dart 程式的按鈕 -->
+<h4>純 Dart 程式</h4>
+<p><button onclick="getDart('temperature')">Temperature</button> <button onclick="getDart('for')">For Loop</button> <button onclick="getDart('sum')">Sum</button> <button onclick="getDart('runge_kutta')">Runge-Kutta</button> <button onclick="getDart('rk_ex1')">RK ex1</button> <button onclick="getDart('mass_spring_damping')">Mass Spring Damping</button> <button onclick="getDart('function')">Function</button> <button onclick="getDart('fun_parameter')">Function Parameter</button> <button onclick="getDart('fat_arrow')">Fat Arrow</button></p>
+<h4>Html 程式</h4>
+<p><button onclick="getHtmlDart('roc_flag')">ROC Flag</button> <button onclick="getHtmlDart('grid')">Grid</button> <button onclick="getHtmlDart('xyplot')">X-Y Plot</button> <button onclick="getHtmlDart('slithery')">Slithery</button></p>
+<h4>Flutter 程式</h4>
+<p><button onclick="getFlutter('flutter0')">Flutter0</button> <button onclick="getFlutter('flutter1')">Flutter1</button> <button onclick="getFlutter('flutter2')">Flutter2</button> <button onclick="getFlutter('flutter3')">Flutter3</button> <button onclick="getFlutter('flutter4')">Flutter4</button> <button onclick="getFlutter('flutter_counter')">Flutter Counter</button> <button onclick="getFlutter('flutter_roc')">ROC Flag</button> <button onclick="getFlutter('flutter_mine1')">踩地雷 1</button> <button onclick="getFlutter('flutter_mine2')">踩地雷 2</button> <button onclick="getFlutter('flutter_mine3')">踩地雷 3</button> <button onclick="getFlutter('flutter_mine4')">踩地雷 4</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;theme=dark" width="800"></iframe></p>
