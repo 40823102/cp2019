@@ -101,8 +101,7 @@ document.getElementById("iframe").height = 600 ;
 <p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/Dart 程式&amp;theme=dark" width="800"></iframe></p>
 <h1>W15</h1>
 <p>以Html輸出資料的亂數分組程式:</p>
-<br/><br/><br/><br/><img alt="" height="734" src="/images/Html 流程圖.png" width="715"/>
-<span></span>
+<p><br/><br/><br/><br/><img alt="" height="734" src="/images/Html 流程圖.png" width="715"/> <span></span></p>
 <h1>W16 查驗考試</h1>
 <p><a href="https://www.youtube.com/watch?v=BZ7sUyRjsvU&amp;feature=youtu.be">https://www.youtube.com/watch?v=BZ7sUyRjsvU&amp;feature=youtu.be</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BZ7sUyRjsvU" width="560"></iframe></p>
@@ -119,4 +118,27 @@ document.getElementById("iframe").height = 600 ;
 <h4><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;theme=dark" width="800"></iframe></h4>
 <h4>學習心得</h4>
 <p>從一開始甚麼都不會，完全看不懂DartPad程式內容，在每堂課中跟著老師的腳步學習，將所聽的紀錄於筆記本中，並在課後配合筆記複習老師及同學所錄的影片，一點一滴慢慢學習，雖然還是有很多的不足，但已經慢慢地能夠理解程式內容了，期許自己能夠越來越好!</p>
+<h1>W17查驗考試</h1>
+<p>題目一:重量單位程式轉換設計(純Dart程式)</p>
+<!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823102&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<!-- 取 Dart 程式的按鈕 -->
+<h4>純 Dart 程式</h4>
+<p><button onclick="getDart('重量單位轉換程式設計')">重量單位轉換程式設計</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
 <p></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/重量單位轉換程式設計&amp;theme=dark" width="800"></iframe></p>
