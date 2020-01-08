@@ -125,10 +125,22 @@ function getDart(dirname){
     source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823102&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
     document.getElementById("iframe").src = source ;
 }
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823102&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823102&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
 function largest(){
 document.getElementById("iframe").width = document.body.clientWidth ;
 document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
 }
+
 function original(){
 document.getElementById("iframe").width = 800 ;
 document.getElementById("iframe").height = 600 ;
@@ -136,10 +148,9 @@ document.getElementById("iframe").height = 600 ;
 </script>
 <!-- 取 Dart 程式的按鈕 -->
 <h4>題目一:重量單位轉換程式設計(純Dart程式)</h4>
-<p><a href="http://mde.tw/dartpad/?id=e258ec1038576f30da81003363199f5e">http://mde.tw/dartpad/?id=e258ec1038576f30da81003363199f5e</a></p>
-<p><button onclick="getDart('重量單位轉換程式')">重量單位轉換程式</button></p>
-<p><button onclick="getHtml('重量)">重量</button></p>
+<p><button onclick="getDart('weight')">重量</button></p>
+<h4>題目二:重量單位轉換程式設計(Dart+html+css程式)</h4>
+<p><button onclick="getDart('weight_change')">重量單位轉換程式</button></p>
 <!-- 內建放入的 Dart 原始碼 -->
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
-<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/重量單位轉換程式&amp;theme=dark" width="800"></iframe></p>
-<h4>題目二:重量單位轉換程式設計(Dart+html+css程式)</h4>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/weight&amp;theme=dark" width="800"></iframe></p>

@@ -1,6 +1,6 @@
-name: Dart HTML test with just main
+name: weight_change
 mode:  html
 files:
-  - name: main.dart
+  - name: weight_change.dart
   - name: index.html
   - name: style.css
