@@ -1,9 +1,8 @@
 body {
-  color: rgb(129, 216, 208);
+  color: pink;
   font-size: 20px;
 }
 
 input, select, textarea {
-  font-size: 100%;
-  color: block;
+font-size: 100%;
 }
