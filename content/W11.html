@@ -149,16 +149,30 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">關於 << <a href='關於.html'>Previous</a> <a href='課堂筆記.html'>Next</a> >> 課堂筆記<br /><h1>image</h1>
-<p><img alt="" height="346" src="./../images/9f6b1451e443901c56f3317fb76a9a37.jpg" width="500"/></p>
-<p><br/>Dartad</p>
-<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">main() {
-  for (int i = 0; i &lt; 5; i++) {
-    print('hello $i');
-  }
-  print('hello 中文');
-}</pre>
-<br />關於 << <a href='關於.html'>Previous</a> <a href='課堂筆記.html'>Next</a> >> 課堂筆記</div>
+    <div id="tipue_search_content">W10 << <a href='W10.html'>Previous</a> <a href='W13.html'>Next</a> >> W13<br /><h1>W11</h1>
+<!-- 透過 getDart(dirname) 取位於 downloads/dart_ex/ 目錄中 dirname 目錄中的 Dart 程式碼 -->
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823102&gh_repo=cp2019ag5&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<!-- 取 Dart 程式的按鈕 -->
+<h4>純 Dart 程式</h4>
+<p><button onclick="getDart('for')">for</button></p>
+<p><button onclick="getDart('temperature')">temperature</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823102&amp;gh_repo=cp2019ag5&amp;gh_path=downloads/dart_ex/for&amp;theme=dark" width="800"></iframe></p>
+<br />W10 << <a href='W10.html'>Previous</a> <a href='W13.html'>Next</a> >> W13</div>
         
     <!-- footer -->
       <div class="container">
